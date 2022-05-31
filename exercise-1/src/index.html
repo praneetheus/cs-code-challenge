@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="module" src="./src/index.js"></script>
+    <script src="./src/utils.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <div id="handlebars-template-container"></div>
+  
+  <script id="user-data-handlebars-template" type="text/x-handlebars-template">
+    <div class="users-container">
+      <ul class="users-list">
+        {{#each data}}
+          <li class="user-list-item">
+            <div class="user-info">
+              <div>
+                <img class="user-profile-picture" title="{{id}}-{{name}}" src="{{avatar}}" onerror="setDefaultImg(this)">
+              </div>
+              <div>
+                <span class="user-name">{{name}}</span>
+                <span class="user-more-info">
+                  <button id="show-details-toggle" onclick="showDetails(this)">
+                    Info
+                  </button>
+                </span>
+                <div class="user-details">
+                  <span><strong>Id:</strong> {{id}}</span>
+                  <span><strong>Created:</strong> {{formatTime this.createdAt}}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+
+</body>
+</html>

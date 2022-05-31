@@ -1,0 +1,50 @@
+.user-info {
+    display: flex;
+}
+
+.users-list {
+    list-style: none;
+    padding: 5px;
+}
+
+.user-list-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    width: 335px;
+    height: 75px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user-details {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+}
+
+#show-details-toggle {
+    cursor: pointer;
+    background-color: #676767;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.user-profile-picture {
+    width: 50px;
+    height: 50px;
+}
+
+li:nth-child(even) {
+    background: #eee;
+}
